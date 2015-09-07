@@ -1,6 +1,5 @@
 ## - ADC CORE TEMP software for STM32F1xx / STM32F103_VCT6 / HY-MiniSTM32V -
 
-### Brief:
 This code is an example on how to use the **ADC** to get **cpu temperature**.
 It does not use DMA or interrupts.
 It was written for the **HY-MiniSTM32V board** and tested on it.
