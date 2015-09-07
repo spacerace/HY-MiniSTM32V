@@ -25,10 +25,11 @@ configuration options, it is self-explaining.
 ### USAGE:
 First call *usart1_init()* for proper initialization, after that you can use
 the other functions:
-
 `
 	* void usart1_putc(char c)	/* send single character */
+
 	* void usart1_puts(char *str)   /* send a string */
+
 	* uint8_t usart1_getc()		/* get a character */
 `
 
