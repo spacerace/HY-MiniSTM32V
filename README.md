@@ -9,8 +9,13 @@ The examples in this archive are all IDE-independet, they use gcc and Makefiles.
 	* USART1 with/without printf
 	* I2C1 with PCF8574
 	* CPU temperature reading via ADC
+	* CRC calculation
+	* CRC engine emulation in C
+	* EXTI, Buttons, LEDs
 
 ### Changelog:
+	2015-09-07	CRC
+	2015-09-07      EXTI-Buttons-LEDs
 	2015-09-07	ADC cpu temp example
 	2015-09-07	I2C example
 	2015-09-07	initial commit, USART1 ex, README-files
