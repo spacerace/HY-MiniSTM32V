@@ -6,6 +6,10 @@ It does not use DMA or interrupts.
 It was written for the **HY-MiniSTM32V board** and tested on it.
 This archive includes and uses the ST standard peripherials lib V3.5.0.
 
+### Hardware connection:
+USART1 is configured to use PA9 for TX, PA10 for RX. On the HY-MiniSTM32V these
+are connected to the PL2303 USB-UART-converter.
+
 ### Code size comparison:
 If you decide to use printf/sprintf/scanf/...-family of functions
 you will need a few kilobytes.
