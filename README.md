@@ -1,17 +1,17 @@
-# HY-MiniSTM32V project examples
+## HY-MiniSTM32V project examples
 
-## Brief:
+### Brief:
 This archive includes a few example projects for the **HY-MiniSTM32V board**.
 This board ships with some Keil Examples which are very buggy and mostly
 unusable.
 The examples in this archive are all IDE-independet, they use gcc and Makefiles.
 
 
-## Included Example Projects:
-	- **USART1 with/without printf**
+### Included Example Projects:
+	**USART1 with/without printf**
 
-## TODO:
+### TODO:
 
-## Changelog:
+### Changelog:
 	2015-09-07	initial commit, USART1 ex, README-files
 
