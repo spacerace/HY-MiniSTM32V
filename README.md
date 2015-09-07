@@ -8,10 +8,12 @@ The examples in this archive are all IDE-independet, they use gcc and Makefiles.
 
 
 ### Included Example Projects:
-	**USART1 with/without printf**
+	* USART1 with/without printf
+	* I2C1 with PCF8574
 
 ### TODO:
 
 ### Changelog:
+	2015-09-07	I2C example
 	2015-09-07	initial commit, USART1 ex, README-files
 
