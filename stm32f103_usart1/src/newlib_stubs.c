@@ -26,13 +26,6 @@ char **environ = __env;
 
 int _write(int file, char *ptr, int len);
 
-/*void _exit(int status) {
-	_write(1, "exit", 4);
-	while(1) {
-		;
-	}
-}*/
-
 int _close(int file) {
 	return -1;
 }

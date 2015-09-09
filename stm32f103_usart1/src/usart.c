@@ -59,8 +59,13 @@ uint8_t usart1_getc(void) {
 	return USART1->DR & 0x1FF;
 }
 
-/* here we redirect stdio to USART1, printf */
-#define PUTCHAR_PROTOTYPE	int __io_putchar(int ch)
+/* here we redirect stdio to USART1, gcc's small printf implementation uses 
+ * __io_putchar() function.
+ * other implementations could use _read() and _write() function in 
+ * file newlib_stubs.c
+ */
+#define PUTCHAR_PROTOTYPE	int __io_putchar(int ch)	// gcc
+//#define PUTCHAR_PROTOTYPE	int fputc(int ch, FILE *f)	// Keil/IAR
 
 PUTCHAR_PROTOTYPE {
  	USART_SendData(USART1, (uint8_t) ch);
