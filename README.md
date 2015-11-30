@@ -16,7 +16,7 @@ The examples in this archive are all IDE-independet, they use gcc and Makefiles.
 
 ### Changelog:
 	2015-09-07	CRC
-	2015-09-07      EXTI-Buttons-LEDs
+	2015-09-07	EXTI-Buttons-LEDs
 	2015-09-07	ADC cpu temp example
 	2015-09-07	I2C example
 	2015-09-07	initial commit, USART1 ex, README-files
