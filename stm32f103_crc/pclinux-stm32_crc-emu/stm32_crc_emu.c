@@ -22,7 +22,7 @@ uint32_t data_block[32] = {
 int main(int argc, char **argv) {
 	if(argc != 3) {
 		printf("usage: %s <32bit hex value crc> <32bit hex value data>\n", argv[0]);
-		printf("          crc value is 0xFFFFFFFF is no calculation was before.\n");
+		printf("          crc value 0xFFFFFFFF means no calculation was before.\n");
 		exit(-1);
 	}
 
