@@ -12,8 +12,6 @@
 
 #include "stm32f10x.h"
 #include "usart.h"
-#include "buttons.h"
-#include "leds.h"
 #include "sdio_sd.h"
 #include "ff.h"
 
