@@ -13,3 +13,5 @@
 .\obj\main.o: ..\USER\leds.h
 .\obj\main.o: ..\USER\buttons.h
 .\obj\main.o: ..\USER\random.h
+.\obj\main.o: ..\ssd1289\ssd1289_dotmatrix.h
+.\obj\main.o: ..\ssd1289\ssd1289_7seg.h

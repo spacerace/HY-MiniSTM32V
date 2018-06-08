@@ -8,16 +8,29 @@
 #include "leds.h"
 #include "buttons.h"
 #include "random.h"
+#include "ssd1289_dotmatrix.h"
+#include "ssd1289_7seg.h"
 
 int main(void){
+	int i;
+	int color;
+	
 	init_leds();
 
 	ssd1289_init();
-	ssd1289_fill(RGB_COL_BLACK);
+	ssd1289_fill(RGB_COL_W95BLUE);
 	ssd1289_textcon_init();
-	ssd1289_set_font_color(RGB_COL_YELLOW, RGB_COL_BLACK);
-	ssd1289_set_font(FONT_LINUX_8x8);
-	ssd1289_puts("Hello <<SSD1289>>");	
+	ssd1289_set_font_color(RGB_COL_YELLOW, RGB_COL_W95BLUE);
+	ssd1289_set_font(FONT_LINUX_8x16);//
+	//ssd1289_puts("Hello <<SSD1289>>");	
+	
+	color = LCD_COLOR(0, 0, 255);
+	for(i = 0; i < 5; i++) {
+		ssd1289_dotmatrix_digit(i*42, 10, 13, LCD_COLOR(0x1a, 0x2a, 0x3a));
+		ssd1289_dotmatrix_digit(i*42, 10, i, color<<=3);
+	}
+	
+	segment_test();
 	
 	LED1_ON();
 	LED2_ON();

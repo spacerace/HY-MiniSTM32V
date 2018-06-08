@@ -12,6 +12,10 @@
 #define FALSE	0
 #endif
 
+// color conversion
+uint16_t rgb888_to_rgb565(uint8_t r, uint8_t g, uint8_t b);		// takes R, G and B, returns color for display
+#define LCD_COLOR	rgb888_to_rgb565
+
 /* color definitions */
 #define RGB_COL_BLACK           0x0000
 #define RGB_COL_BLUE            0x001F
@@ -23,6 +27,7 @@
 #define RGB_COL_YELLOW  				0xFFE0
 #define RGB_COL_GREY    				0xF7DE
 #define LCD_CLEAR_COLOR					RGB_COL_BLACK
+#define RGB_COL_W95BLUE					LCD_COLOR(0, 0x99, 0x99)
 
 /* fonts */
 #define FONT_LINUX_ACORN_8x8	2
@@ -76,8 +81,6 @@ int  ssd1289_bl_get(void);				// get backlight value
 // touchscreen functions
 void init_ads7843(void);					// initialize touchscreen controller
 
-// color conversion
-uint16_t rgb888_to_rgb565(uint8_t r, uint8_t g, uint8_t b);		// takes R, G and B, returns color for display
 
 // graphic functions
 void ssd1289_line(int x1, int y1, int x2, int y2, uint16_t color);			// bresenham line, slow, for H/V lines see lineh() and linev()

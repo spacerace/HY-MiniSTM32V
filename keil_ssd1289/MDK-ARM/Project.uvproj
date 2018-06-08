@@ -588,6 +588,26 @@
               <FileType>5</FileType>
               <FilePath>..\ssd1289\ssd1289.h</FilePath>
             </File>
+            <File>
+              <FileName>ssd1289_dotmatrix.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ssd1289\ssd1289_dotmatrix.c</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1289_dotmatrix.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\ssd1289\ssd1289_dotmatrix.h</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1289_7seg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ssd1289\ssd1289_7seg.c</FilePath>
+            </File>
+            <File>
+              <FileName>ssd1289_7seg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\ssd1289\ssd1289_7seg.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Obj\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Thu Jun 07 12:19:23 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Fri Jun 08 08:07:44 2018
 <BR><P>
 <H3>Maximum Stack Usage =        136 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; ssd1289_puts &rArr; ssd1289_putc &rArr; ssd1289_put_char_at &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+main &rArr; segment_test &rArr; segment_putn &rArr; draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
 <P>
 <H3>
 Mutually Recursive functions
@@ -98,7 +98,7 @@ Global Symbols
 <P><STRONG><a name="[48]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(.text)
 </UL>
-<P><STRONG><a name="[6f]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[74]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[49]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -108,15 +108,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[70]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[75]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[71]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[76]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[72]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[77]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[73]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[78]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[74]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[79]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
@@ -308,7 +308,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[75]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[7a]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.BusFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
@@ -332,29 +332,29 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 </UL>
 
-<P><STRONG><a name="[6b]"></a>FSMC_NORSRAMCmd</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, stm32f10x_fsmc.o(i.FSMC_NORSRAMCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_fsmc
+<P><STRONG><a name="[73]"></a>FSMC_NORSRAMCmd</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, stm32f10x_fsmc.o(i.FSMC_NORSRAMCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_fsmc
 </UL>
 
-<P><STRONG><a name="[6a]"></a>FSMC_NORSRAMInit</STRONG> (Thumb, 230 bytes, Stack size 0 bytes, stm32f10x_fsmc.o(i.FSMC_NORSRAMInit))
-<BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_fsmc
+<P><STRONG><a name="[72]"></a>FSMC_NORSRAMInit</STRONG> (Thumb, 230 bytes, Stack size 0 bytes, stm32f10x_fsmc.o(i.FSMC_NORSRAMInit))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_fsmc
 </UL>
 
-<P><STRONG><a name="[52]"></a>GPIO_Init</STRONG> (Thumb, 278 bytes, Stack size 24 bytes, stm32f10x_gpio.o(i.GPIO_Init))
+<P><STRONG><a name="[55]"></a>GPIO_Init</STRONG> (Thumb, 278 bytes, Stack size 24 bytes, stm32f10x_gpio.o(i.GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_leds
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_gpio
+<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_leds
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_gpio
 </UL>
 
-<P><STRONG><a name="[5c]"></a>GPIO_PinRemapConfig</STRONG> (Thumb, 138 bytes, Stack size 20 bytes, stm32f10x_gpio.o(i.GPIO_PinRemapConfig))
+<P><STRONG><a name="[62]"></a>GPIO_PinRemapConfig</STRONG> (Thumb, 138 bytes, Stack size 20 bytes, stm32f10x_gpio.o(i.GPIO_PinRemapConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_PinRemapConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
 </UL>
 
-<P><STRONG><a name="[59]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_SetBits))
+<P><STRONG><a name="[5e]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_SetBits))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -370,18 +370,18 @@ Global Symbols
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.PendSV_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[69]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_fsmc
+<P><STRONG><a name="[71]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_fsmc
 </UL>
 
-<P><STRONG><a name="[5b]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<P><STRONG><a name="[61]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
 </UL>
 
-<P><STRONG><a name="[51]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_leds
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_gpio
+<P><STRONG><a name="[54]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_leds
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_gpio
 </UL>
 
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.SVC_Handler))
@@ -397,158 +397,186 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(.text)
 </UL>
-<P><STRONG><a name="[5f]"></a>TIM_ARRPreloadConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_ARRPreloadConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<P><STRONG><a name="[65]"></a>TIM_ARRPreloadConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_ARRPreloadConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
 </UL>
 
-<P><STRONG><a name="[60]"></a>TIM_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<P><STRONG><a name="[66]"></a>TIM_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
 </UL>
 
-<P><STRONG><a name="[62]"></a>TIM_OC2Init</STRONG> (Thumb, 154 bytes, Stack size 16 bytes, stm32f10x_tim.o(i.TIM_OC2Init))
+<P><STRONG><a name="[68]"></a>TIM_OC2Init</STRONG> (Thumb, 154 bytes, Stack size 16 bytes, stm32f10x_tim.o(i.TIM_OC2Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = TIM_OC2Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_set
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_set
 </UL>
 
-<P><STRONG><a name="[5e]"></a>TIM_OC2PreloadConfig</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_OC2PreloadConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<P><STRONG><a name="[64]"></a>TIM_OC2PreloadConfig</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_OC2PreloadConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
 </UL>
 
-<P><STRONG><a name="[5d]"></a>TIM_TimeBaseInit</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_TimeBaseInit))
-<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<P><STRONG><a name="[63]"></a>TIM_TimeBaseInit</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_TimeBaseInit))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
 </UL>
 
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[76]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[7b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[77]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[7c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[78]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[7d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[50]"></a>init_leds</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, leds.o(i.init_leds))
+<P><STRONG><a name="[53]"></a>init_leds</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, leds.o(i.init_leds))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = init_leds &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = main &rArr; ssd1289_puts &rArr; ssd1289_putc &rArr; ssd1289_put_char_at &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 150 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = main &rArr; segment_test &rArr; segment_putn &rArr; draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_textcon_init
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font_color
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_puts
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_fill_screen
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_leds
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_textcon_init
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font_color
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_fill_screen
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix_digit
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rgb888_to_rgb565
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_leds
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[5a]"></a>ssd1289_bl_init</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, ssd1289.o(i.ssd1289_bl_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = ssd1289_bl_init &rArr; GPIO_Init
+<P><STRONG><a name="[57]"></a>rgb888_to_rgb565</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, ssd1289_graphic.o(i.rgb888_to_rgb565))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = rgb888_to_rgb565
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinRemapConfig
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2PreloadConfig
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ARRPreloadConfig
-</UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
-</UL>
-
-<P><STRONG><a name="[61]"></a>ssd1289_bl_set</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, ssd1289.o(i.ssd1289_bl_set))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ssd1289_bl_set &rArr; TIM_OC2Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2Init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
-</UL>
-
-<P><STRONG><a name="[54]"></a>ssd1289_fill_screen</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, ssd1289_graphic.o(i.ssd1289_fill_screen))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ssd1289_fill_screen &rArr; ssd1289_set_cursor
-</UL>
-<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_cursor
-</UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[53]"></a>ssd1289_init</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, ssd1289.o(i.ssd1289_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = ssd1289_init &rArr; ssd1289_init_fsmc
-</UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_set
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_read_reg
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_gpio
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_fsmc
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_controller_init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[6c]"></a>ssd1289_put_char_at</STRONG> (Thumb, 136 bytes, Stack size 56 bytes, ssd1289_text.o(i.ssd1289_put_char_at))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = ssd1289_put_char_at &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
-</UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_setpx
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_putc
-</UL>
-
-<P><STRONG><a name="[6e]"></a>ssd1289_putc</STRONG> (Thumb, 132 bytes, Stack size 40 bytes, ssd1289_text.o(i.ssd1289_putc))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = ssd1289_putc &rArr; ssd1289_put_char_at &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
-</UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_put_char_at
-</UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_puts
-</UL>
-
-<P><STRONG><a name="[58]"></a>ssd1289_puts</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, ssd1289_text.o(i.ssd1289_puts))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = ssd1289_puts &rArr; ssd1289_putc &rArr; ssd1289_put_char_at &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
-</UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_putc
-</UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[65]"></a>ssd1289_set_cursor</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, ssd1289.o(i.ssd1289_set_cursor))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = ssd1289_set_cursor
-</UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_write_reg
-</UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_fill_screen
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_setpx
-</UL>
-
-<P><STRONG><a name="[57]"></a>ssd1289_set_font</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, ssd1289_text.o(i.ssd1289_set_font))
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_textcon_init
+<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[56]"></a>ssd1289_set_font_color</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, ssd1289_text.o(i.ssd1289_set_font_color))
+<P><STRONG><a name="[5f]"></a>segment_putn</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, ssd1289_7seg.o(i.segment_putn))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = segment_putn &rArr; draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_7segment
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
+</UL>
+
+<P><STRONG><a name="[5d]"></a>segment_test</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, ssd1289_7seg.o(i.segment_test))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = segment_test &rArr; segment_putn &rArr; draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rgb888_to_rgb565
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_putn
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_7segment
+</UL>
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[60]"></a>ssd1289_bl_init</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, ssd1289.o(i.ssd1289_bl_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = ssd1289_bl_init &rArr; GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinRemapConfig
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2PreloadConfig
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ARRPreloadConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
+</UL>
+
+<P><STRONG><a name="[67]"></a>ssd1289_bl_set</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, ssd1289.o(i.ssd1289_bl_set))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ssd1289_bl_set &rArr; TIM_OC2Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
+</UL>
+
+<P><STRONG><a name="[6b]"></a>ssd1289_dotmatrix</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, ssd1289_dotmatrix.o(i.ssd1289_dotmatrix))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = ssd1289_dotmatrix &rArr; ssd1289_dotmatrix_pixel &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix_pixel
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix_digit
+</UL>
+
+<P><STRONG><a name="[5c]"></a>ssd1289_dotmatrix_digit</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, ssd1289_dotmatrix.o(i.ssd1289_dotmatrix_digit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = ssd1289_dotmatrix_digit &rArr; ssd1289_dotmatrix &rArr; ssd1289_dotmatrix_pixel &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix
+</UL>
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[6c]"></a>ssd1289_dotmatrix_pixel</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, ssd1289_dotmatrix.o(i.ssd1289_dotmatrix_pixel))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = ssd1289_dotmatrix_pixel &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_setpx
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix
+</UL>
+
+<P><STRONG><a name="[58]"></a>ssd1289_fill_screen</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, ssd1289_graphic.o(i.ssd1289_fill_screen))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ssd1289_fill_screen &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_cursor
+</UL>
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[56]"></a>ssd1289_init</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, ssd1289.o(i.ssd1289_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = ssd1289_init &rArr; ssd1289_init_fsmc
+</UL>
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_set
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_bl_init
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_read_reg
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_gpio
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init_fsmc
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_controller_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[6d]"></a>ssd1289_set_cursor</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, ssd1289.o(i.ssd1289_set_cursor))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_write_reg
+</UL>
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_fill_screen
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_setpx
+</UL>
+
+<P><STRONG><a name="[5b]"></a>ssd1289_set_font</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, ssd1289_text.o(i.ssd1289_set_font))
+<BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_textcon_init
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[5a]"></a>ssd1289_set_font_color</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, ssd1289_text.o(i.ssd1289_set_font_color))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6d]"></a>ssd1289_setpx</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, ssd1289_graphic.o(i.ssd1289_setpx))
+<P><STRONG><a name="[52]"></a>ssd1289_setpx</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, ssd1289_graphic.o(i.ssd1289_setpx))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ssd1289_setpx &rArr; ssd1289_set_cursor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_cursor
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_cursor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_put_char_at
+<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_segment
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix_pixel
 </UL>
 
-<P><STRONG><a name="[55]"></a>ssd1289_textcon_init</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, ssd1289_text.o(i.ssd1289_textcon_init))
+<P><STRONG><a name="[59]"></a>ssd1289_textcon_init</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, ssd1289_text.o(i.ssd1289_textcon_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ssd1289_textcon_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -570,40 +598,57 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 
-<P><STRONG><a name="[63]"></a>ssd1289_controller_init</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, ssd1289.o(i.ssd1289_controller_init))
+<P><STRONG><a name="[69]"></a>ssd1289_controller_init</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, ssd1289.o(i.ssd1289_controller_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ssd1289_controller_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_write_reg
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_write_reg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
 </UL>
 
-<P><STRONG><a name="[67]"></a>ssd1289_init_fsmc</STRONG> (Thumb, 94 bytes, Stack size 96 bytes, ssd1289.o(i.ssd1289_init_fsmc))
+<P><STRONG><a name="[6f]"></a>ssd1289_init_fsmc</STRONG> (Thumb, 94 bytes, Stack size 96 bytes, ssd1289.o(i.ssd1289_init_fsmc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = ssd1289_init_fsmc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FSMC_NORSRAMInit
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FSMC_NORSRAMCmd
+<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FSMC_NORSRAMInit
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FSMC_NORSRAMCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
 </UL>
 
-<P><STRONG><a name="[66]"></a>ssd1289_init_gpio</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, ssd1289.o(i.ssd1289_init_gpio))
+<P><STRONG><a name="[6e]"></a>ssd1289_init_gpio</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, ssd1289.o(i.ssd1289_init_gpio))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ssd1289_init_gpio &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
-</UL>
-
-<P><STRONG><a name="[68]"></a>ssd1289_read_reg</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, ssd1289.o(i.ssd1289_read_reg))
-<BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
 </UL>
 
-<P><STRONG><a name="[64]"></a>ssd1289_write_reg</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ssd1289.o(i.ssd1289_write_reg))
-<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_controller_init
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_cursor
+<P><STRONG><a name="[70]"></a>ssd1289_read_reg</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, ssd1289.o(i.ssd1289_read_reg))
+<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
+</UL>
+
+<P><STRONG><a name="[6a]"></a>ssd1289_write_reg</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ssd1289.o(i.ssd1289_write_reg))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_controller_init
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_cursor
+</UL>
+
+<P><STRONG><a name="[50]"></a>draw_7segment</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, ssd1289_7seg.o(i.draw_7segment))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_segment
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_putn
+</UL>
+
+<P><STRONG><a name="[51]"></a>draw_segment</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, ssd1289_7seg.o(i.draw_segment))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_setpx
+</UL>
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_7segment
 </UL>
 <P>
 <H3>
