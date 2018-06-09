@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Fri Jun 08 08:07:44 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Jun 09 10:34:06 2018
 <BR><P>
 <H3>Maximum Stack Usage =        136 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -62,7 +62,7 @@ Function Pointers
  <LI><a href="#[3d]">SPI3_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[6]">SVC_Handler</a> from stm32f10x_it.o(i.SVC_Handler) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[9]">SysTick_Handler</a> from stm32f10x_it.o(i.SysTick_Handler) referenced from startup_stm32f10x_hd.o(RESET)
- <LI><a href="#[47]">SystemInit</a> from system_stm32f10x_1.o(i.SystemInit) referenced from startup_stm32f10x_hd.o(.text)
+ <LI><a href="#[47]">SystemInit</a> from system_stm32f10x.o(i.SystemInit) referenced from startup_stm32f10x_hd.o(.text)
  <LI><a href="#[c]">TAMPER_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[22]">TIM1_BRK_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[25]">TIM1_CC_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
@@ -390,7 +390,7 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.SysTick_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[47]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x_1.o(i.SystemInit))
+<P><STRONG><a name="[47]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
@@ -428,6 +428,15 @@ Global Symbols
 
 <P><STRONG><a name="[7d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
+<P><STRONG><a name="[50]"></a>draw_7segment</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, ssd1289_7seg.o(i.draw_7segment))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_segment
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_putn
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
+</UL>
+
 <P><STRONG><a name="[53]"></a>init_leds</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, leds.o(i.init_leds))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = init_leds &rArr; GPIO_Init
 </UL>
@@ -437,23 +446,23 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 150 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 128 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = main &rArr; segment_test &rArr; segment_putn &rArr; draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_textcon_init
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font_color
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_textcon_init
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font_color
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_init
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_fill_screen
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_fill_screen
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix_digit
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rgb888_to_rgb565
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rgb888_to_rgb565
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_leds
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[57]"></a>rgb888_to_rgb565</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, ssd1289_graphic.o(i.rgb888_to_rgb565))
+<P><STRONG><a name="[5b]"></a>rgb888_to_rgb565</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, ssd1289_graphic.o(i.rgb888_to_rgb565))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = rgb888_to_rgb565
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
@@ -468,11 +477,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
 </UL>
 
-<P><STRONG><a name="[5d]"></a>segment_test</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, ssd1289_7seg.o(i.segment_test))
+<P><STRONG><a name="[5d]"></a>segment_test</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, main.o(i.segment_test))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = segment_test &rArr; segment_putn &rArr; draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rgb888_to_rgb565
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_putn
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_putn
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rgb888_to_rgb565
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_7segment
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -525,7 +534,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix
 </UL>
 
-<P><STRONG><a name="[58]"></a>ssd1289_fill_screen</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, ssd1289_graphic.o(i.ssd1289_fill_screen))
+<P><STRONG><a name="[57]"></a>ssd1289_fill_screen</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, ssd1289_graphic.o(i.ssd1289_fill_screen))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ssd1289_fill_screen &rArr; ssd1289_set_cursor
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_cursor
@@ -551,16 +560,16 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_write_reg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_fill_screen
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_fill_screen
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_setpx
 </UL>
 
-<P><STRONG><a name="[5b]"></a>ssd1289_set_font</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, ssd1289_text.o(i.ssd1289_set_font))
-<BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_textcon_init
+<P><STRONG><a name="[5a]"></a>ssd1289_set_font</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, ssd1289_text.o(i.ssd1289_set_font))
+<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_textcon_init
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5a]"></a>ssd1289_set_font_color</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, ssd1289_text.o(i.ssd1289_set_font_color))
+<P><STRONG><a name="[59]"></a>ssd1289_set_font_color</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, ssd1289_text.o(i.ssd1289_set_font_color))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -573,10 +582,10 @@ Global Symbols
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_dotmatrix_pixel
 </UL>
 
-<P><STRONG><a name="[59]"></a>ssd1289_textcon_init</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, ssd1289_text.o(i.ssd1289_textcon_init))
+<P><STRONG><a name="[58]"></a>ssd1289_textcon_init</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, ssd1289_text.o(i.ssd1289_textcon_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ssd1289_textcon_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font
+<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_font
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -584,7 +593,7 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[4e]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x_1.o(i.SetSysClock))
+<P><STRONG><a name="[4e]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SetSysClock &rArr; SetSysClockTo72
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
@@ -592,7 +601,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[4f]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x_1.o(i.SetSysClockTo72))
+<P><STRONG><a name="[4f]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClockTo72
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
@@ -632,15 +641,6 @@ Local Symbols
 <P><STRONG><a name="[6a]"></a>ssd1289_write_reg</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ssd1289.o(i.ssd1289_write_reg))
 <BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_controller_init
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssd1289_set_cursor
-</UL>
-
-<P><STRONG><a name="[50]"></a>draw_7segment</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, ssd1289_7seg.o(i.draw_7segment))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = draw_7segment &rArr; draw_segment &rArr; ssd1289_setpx &rArr; ssd1289_set_cursor
-</UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_segment
-</UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_test
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segment_putn
 </UL>
 
 <P><STRONG><a name="[51]"></a>draw_segment</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, ssd1289_7seg.o(i.draw_segment))

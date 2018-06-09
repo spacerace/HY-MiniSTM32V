@@ -1,0 +1,13 @@
+.\obj\ssd1289_7seg.o: ..\ssd1289\ssd1289_7seg.c
+.\obj\ssd1289_7seg.o: ..\ssd1289\ssd1289_7seg.h
+.\obj\ssd1289_7seg.o: ..\ssd1289\ssd1289.h
+.\obj\ssd1289_7seg.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\obj\ssd1289_7seg.o: ..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
+.\obj\ssd1289_7seg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\ssd1289_7seg.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
+.\obj\ssd1289_7seg.o: ..\USER\stm32f10x_conf.h
+.\obj\ssd1289_7seg.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\obj\ssd1289_7seg.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\obj\ssd1289_7seg.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\obj\ssd1289_7seg.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\obj\ssd1289_7seg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h

@@ -11,6 +11,8 @@
 #include "ssd1289_dotmatrix.h"
 #include "ssd1289_7seg.h"
 
+int segment_test(void);
+
 int main(void){
 	int i;
 	int color;
@@ -18,9 +20,9 @@ int main(void){
 	init_leds();
 
 	ssd1289_init();
-	ssd1289_fill(RGB_COL_W95BLUE);
+	ssd1289_fill(RGB_COL_BLACK);
 	ssd1289_textcon_init();
-	ssd1289_set_font_color(RGB_COL_YELLOW, RGB_COL_W95BLUE);
+	ssd1289_set_font_color(RGB_COL_YELLOW, RGB_COL_BLACK);
 	ssd1289_set_font(FONT_LINUX_8x16);//
 	//ssd1289_puts("Hello <<SSD1289>>");	
 	
@@ -39,6 +41,19 @@ int main(void){
 		
 	}
 
+}
+
+int segment_test(void) {
+	int x, y, i;
+	y = 80;
+	i = 0x08;
+	for(x = 10; x < 215; x+=27) {
+		draw_7segment(x, y, 0xff, LCD_COLOR(0x10, 0, 0));
+		segment_putn(x, y, i, LCD_COLOR(0xff, 0, 0));
+		i++;
+	}
+	
+	return 0;
 }
 
 #ifdef  USE_FULL_ASSERT
