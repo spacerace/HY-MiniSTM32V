@@ -5,7 +5,7 @@ It was written for the **HY-MiniSTM32V board** and tested on it.
 This archive includes and uses the ST standard peripherials lib V3.5.0.  
   
 ### Example output from a 72MHz STM32F103  
-`HY-MiniSTM32V STM32F103-VCT6 DWT CYCLE COUNTER EX.
+```HY-MiniSTM32V STM32F103-VCT6 DWT CYCLE COUNTER EX.
 ----------------------------------------------------
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
 ----------------------------------------------------
@@ -22,7 +22,7 @@ Different MCU-speeds give different time-per-tick values:
 
 SystemCoreClock = 72000000Hz
 time used in nano-seconds: 4056186
-`  
+```
 (4056186nS = 4056.186µS = 4.056mS)  
   
 ### TODO:  
