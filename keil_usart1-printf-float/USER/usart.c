@@ -7,11 +7,16 @@
 #include "usart.h"
 #include <stdio.h>
 
+
+/* here we redirect standard output to our putchar routine.
+ * GCC and Keil handle it different, preprocessor decides.
+ * putchar routine is at the end of this file.
+ */
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
      set to 'Yes') calls __io_putchar() */
   #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
-#else
+#else	/* Keil */
   #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
 #endif /* __GNUC__ */
 	
@@ -46,8 +51,8 @@ void usart1_init(void) {
 	USART_Init(USART1, &usart_i);
 
 	/* enable RXNE interrupt */
-	//USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
-	//NVIC_EnableIRQ(USART1_IRQn);
+	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+	NVIC_EnableIRQ(USART1_IRQn);
 
 	USART_Cmd(USART1,ENABLE);
 }
@@ -71,20 +76,16 @@ uint8_t usart1_getc(void) {
 	return USART1->DR & 0x1FF;
 }
 
+/* simple IRQ handler that just sends back what was received */
 void USART1_IRQHandler(void) {
-//	char c;
+	char c;
 	
-//	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET) {
-//		c = (char)USART_ReceiveData(USART1);
-		//c = usart1_getc();
-		//usart1_putc(c);
-		//USART_SendData(USART1, c);
-//		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
-
-//		c = (uint8_t)(USART_ReceiveData(USART1)&0x00FF); 
-//		usart1_putc('>');
-//		usart1_putc(c);
-//	}
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET) {
+		c = (char)USART_ReceiveData(USART1);							/* get char into 'c' */
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE);		/* clear pending flag */
+		USART_SendData(USART1, c);												/* send back data */		
+	}
+	return;
 }
 
 /**
