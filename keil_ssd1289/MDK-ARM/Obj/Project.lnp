@@ -36,6 +36,6 @@
 ".\obj\ssd1289_dotmatrix.o"
 ".\obj\ssd1289_7seg.o"
 --library_type=microlib --strict --scatter ".\Obj\Project.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\List\Project.map" -o .\Obj\Project.axf

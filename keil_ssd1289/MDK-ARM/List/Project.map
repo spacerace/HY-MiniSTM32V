@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
 
 ==============================================================================
 
@@ -1043,101 +1043,101 @@ Memory Map of the image
 
   Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003858, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003830, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00003830, Max: 0x00040000, ABSOLUTE)
 
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x00000130   Data   RO         3269    RESET               startup_stm32f10x_hd.o
-    0x08000130   0x08000130   0x00000000   Code   RO         3624  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x08000130   0x00000004   Code   RO         3631    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x08000134   0x00000004   Code   RO         3634    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         3636    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         3638    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x08000138   0x00000008   Code   RO         3639    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         3641    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         3643    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x08000140   0x00000004   Code   RO         3632    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000144   0x08000144   0x00000024   Code   RO         3270    .text               startup_stm32f10x_hd.o
-    0x08000168   0x08000168   0x00000024   Code   RO         3650    .text               mc_w.l(init.o)
-    0x0800018c   0x0800018c   0x00000004   Code   RO           68    i.BusFault_Handler  stm32f10x_it.o
-    0x08000190   0x08000190   0x00000002   Code   RO           69    i.DebugMon_Handler  stm32f10x_it.o
-    0x08000192   0x08000192   0x00000002   PAD
-    0x08000194   0x08000194   0x0000002c   Code   RO          131    i.EXTI15_10_IRQHandler  buttons.o
-    0x080001c0   0x080001c0   0x0000000c   Code   RO         1517    i.EXTI_ClearITPendingBit  stm32f10x_exti.o
-    0x080001cc   0x080001cc   0x00000028   Code   RO         1521    i.EXTI_GetITStatus  stm32f10x_exti.o
-    0x080001f4   0x080001f4   0x00000034   Code   RO         1581    i.FSMC_NORSRAMCmd   stm32f10x_fsmc.o
-    0x08000228   0x08000228   0x000000e6   Code   RO         1583    i.FSMC_NORSRAMInit  stm32f10x_fsmc.o
-    0x0800030e   0x0800030e   0x00000116   Code   RO          453    i.GPIO_Init         stm32f10x_gpio.o
-    0x08000424   0x08000424   0x00000090   Code   RO          455    i.GPIO_PinRemapConfig  stm32f10x_gpio.o
-    0x080004b4   0x080004b4   0x00000004   Code   RO          461    i.GPIO_SetBits      stm32f10x_gpio.o
-    0x080004b8   0x080004b8   0x00000004   Code   RO           70    i.HardFault_Handler  stm32f10x_it.o
-    0x080004bc   0x080004bc   0x00000004   Code   RO           71    i.MemManage_Handler  stm32f10x_it.o
-    0x080004c0   0x080004c0   0x00000002   Code   RO           72    i.NMI_Handler       stm32f10x_it.o
-    0x080004c2   0x080004c2   0x00000002   Code   RO           73    i.PendSV_Handler    stm32f10x_it.o
-    0x080004c4   0x080004c4   0x00000020   Code   RO          562    i.RCC_AHBPeriphClockCmd  stm32f10x_rcc.o
-    0x080004e4   0x080004e4   0x00000020   Code   RO          563    i.RCC_APB1PeriphClockCmd  stm32f10x_rcc.o
-    0x08000504   0x08000504   0x00000020   Code   RO          565    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
-    0x08000524   0x08000524   0x00000002   Code   RO           74    i.SVC_Handler       stm32f10x_it.o
-    0x08000526   0x08000526   0x00000008   Code   RO         3233    i.SetSysClock       system_stm32f10x.o
-    0x0800052e   0x0800052e   0x00000002   PAD
-    0x08000530   0x08000530   0x000000e0   Code   RO         3234    i.SetSysClockTo72   system_stm32f10x.o
-    0x08000610   0x08000610   0x00000002   Code   RO           75    i.SysTick_Handler   stm32f10x_it.o
-    0x08000612   0x08000612   0x00000002   PAD
-    0x08000614   0x08000614   0x00000060   Code   RO         3236    i.SystemInit        system_stm32f10x.o
-    0x08000674   0x08000674   0x00000018   Code   RO         2435    i.TIM_ARRPreloadConfig  stm32f10x_tim.o
-    0x0800068c   0x0800068c   0x00000018   Code   RO         2447    i.TIM_Cmd           stm32f10x_tim.o
-    0x080006a4   0x080006a4   0x000000a4   Code   RO         2481    i.TIM_OC2Init       stm32f10x_tim.o
-    0x08000748   0x08000748   0x0000001a   Code   RO         2484    i.TIM_OC2PreloadConfig  stm32f10x_tim.o
-    0x08000762   0x08000762   0x00000002   PAD
-    0x08000764   0x08000764   0x000000a4   Code   RO         2518    i.TIM_TimeBaseInit  stm32f10x_tim.o
-    0x08000808   0x08000808   0x00000004   Code   RO           76    i.UsageFault_Handler  stm32f10x_it.o
-    0x0800080c   0x0800080c   0x0000000e   Code   RO         3656    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800081a   0x0800081a   0x00000002   Code   RO         3657    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0800081c   0x0800081c   0x0000000e   Code   RO         3658    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800082a   0x0800082a   0x0000009c   Code   RO         3599    i.draw_7segment     ssd1289_7seg.o
-    0x080008c6   0x080008c6   0x00000002   PAD
-    0x080008c8   0x080008c8   0x0000008c   Code   RO         3600    i.draw_segment      ssd1289_7seg.o
-    0x08000954   0x08000954   0x00000028   Code   RO          202    i.init_leds         leds.o
-    0x0800097c   0x0800097c   0x00000084   Code   RO            1    i.main              main.o
-    0x08000a00   0x08000a00   0x0000001e   Code   RO         3274    i.rgb888_to_rgb565  ssd1289_graphic.o
-    0x08000a1e   0x08000a1e   0x0000007e   Code   RO         3601    i.segment_putn      ssd1289_7seg.o
-    0x08000a9c   0x08000a9c   0x0000004a   Code   RO            2    i.segment_test      main.o
-    0x08000ae6   0x08000ae6   0x00000002   PAD
-    0x08000ae8   0x08000ae8   0x00000094   Code   RO         3509    i.ssd1289_bl_init   ssd1289.o
-    0x08000b7c   0x08000b7c   0x0000003c   Code   RO         3510    i.ssd1289_bl_set    ssd1289.o
-    0x08000bb8   0x08000bb8   0x00000024   Code   RO         3511    i.ssd1289_controller_init  ssd1289.o
-    0x08000bdc   0x08000bdc   0x0000004c   Code   RO         3573    i.ssd1289_dotmatrix  ssd1289_dotmatrix.o
-    0x08000c28   0x08000c28   0x00000028   Code   RO         3574    i.ssd1289_dotmatrix_digit  ssd1289_dotmatrix.o
-    0x08000c50   0x08000c50   0x00000044   Code   RO         3575    i.ssd1289_dotmatrix_pixel  ssd1289_dotmatrix.o
-    0x08000c94   0x08000c94   0x00000024   Code   RO         3279    i.ssd1289_fill_screen  ssd1289_graphic.o
-    0x08000cb8   0x08000cb8   0x00000050   Code   RO         3512    i.ssd1289_init      ssd1289.o
-    0x08000d08   0x08000d08   0x0000005e   Code   RO         3513    i.ssd1289_init_fsmc  ssd1289.o
-    0x08000d66   0x08000d66   0x00000002   PAD
-    0x08000d68   0x08000d68   0x00000054   Code   RO         3514    i.ssd1289_init_gpio  ssd1289.o
-    0x08000dbc   0x08000dbc   0x00000014   Code   RO         3515    i.ssd1289_read_reg  ssd1289.o
-    0x08000dd0   0x08000dd0   0x00000020   Code   RO         3516    i.ssd1289_set_cursor  ssd1289.o
-    0x08000df0   0x08000df0   0x00000084   Code   RO         3385    i.ssd1289_set_font  ssd1289_text.o
-    0x08000e74   0x08000e74   0x0000000c   Code   RO         3386    i.ssd1289_set_font_color  ssd1289_text.o
-    0x08000e80   0x08000e80   0x0000001c   Code   RO         3288    i.ssd1289_setpx     ssd1289_graphic.o
-    0x08000e9c   0x08000e9c   0x00000028   Code   RO         3393    i.ssd1289_textcon_init  ssd1289_text.o
-    0x08000ec4   0x08000ec4   0x00000010   Code   RO         3517    i.ssd1289_write_reg  ssd1289.o
-    0x08000ed4   0x08000ed4   0x00002800   Data   RO         3395    .constdata          ssd1289_text.o
-    0x080036d4   0x080036d4   0x000000b4   Data   RO         3518    .constdata          ssd1289.o
-    0x08003788   0x08003788   0x0000006a   Data   RO         3576    .constdata          ssd1289_dotmatrix.o
-    0x080037f2   0x080037f2   0x0000001e   Data   RO         3602    .constdata          ssd1289_7seg.o
-    0x08003810   0x08003810   0x00000020   Data   RO         3654    Region$$Table       anon$$obj.o
+    0x08000000   0x00000130   Data   RO         3269    RESET               startup_stm32f10x_hd.o
+    0x08000130   0x00000000   Code   RO         3624  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x00000004   Code   RO         3631    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x00000004   Code   RO         3634    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x00000000   Code   RO         3636    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x00000000   Code   RO         3638    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x00000008   Code   RO         3639    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x00000000   Code   RO         3641    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x00000000   Code   RO         3643    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x00000004   Code   RO         3632    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000144   0x00000024   Code   RO         3270    .text               startup_stm32f10x_hd.o
+    0x08000168   0x00000024   Code   RO         3650    .text               mc_w.l(init.o)
+    0x0800018c   0x00000004   Code   RO           68    i.BusFault_Handler  stm32f10x_it.o
+    0x08000190   0x00000002   Code   RO           69    i.DebugMon_Handler  stm32f10x_it.o
+    0x08000192   0x00000002   PAD
+    0x08000194   0x0000002c   Code   RO          131    i.EXTI15_10_IRQHandler  buttons.o
+    0x080001c0   0x0000000c   Code   RO         1517    i.EXTI_ClearITPendingBit  stm32f10x_exti.o
+    0x080001cc   0x00000028   Code   RO         1521    i.EXTI_GetITStatus  stm32f10x_exti.o
+    0x080001f4   0x00000034   Code   RO         1581    i.FSMC_NORSRAMCmd   stm32f10x_fsmc.o
+    0x08000228   0x000000e6   Code   RO         1583    i.FSMC_NORSRAMInit  stm32f10x_fsmc.o
+    0x0800030e   0x00000116   Code   RO          453    i.GPIO_Init         stm32f10x_gpio.o
+    0x08000424   0x00000090   Code   RO          455    i.GPIO_PinRemapConfig  stm32f10x_gpio.o
+    0x080004b4   0x00000004   Code   RO          461    i.GPIO_SetBits      stm32f10x_gpio.o
+    0x080004b8   0x00000004   Code   RO           70    i.HardFault_Handler  stm32f10x_it.o
+    0x080004bc   0x00000004   Code   RO           71    i.MemManage_Handler  stm32f10x_it.o
+    0x080004c0   0x00000002   Code   RO           72    i.NMI_Handler       stm32f10x_it.o
+    0x080004c2   0x00000002   Code   RO           73    i.PendSV_Handler    stm32f10x_it.o
+    0x080004c4   0x00000020   Code   RO          562    i.RCC_AHBPeriphClockCmd  stm32f10x_rcc.o
+    0x080004e4   0x00000020   Code   RO          563    i.RCC_APB1PeriphClockCmd  stm32f10x_rcc.o
+    0x08000504   0x00000020   Code   RO          565    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
+    0x08000524   0x00000002   Code   RO           74    i.SVC_Handler       stm32f10x_it.o
+    0x08000526   0x00000008   Code   RO         3233    i.SetSysClock       system_stm32f10x.o
+    0x0800052e   0x00000002   PAD
+    0x08000530   0x000000e0   Code   RO         3234    i.SetSysClockTo72   system_stm32f10x.o
+    0x08000610   0x00000002   Code   RO           75    i.SysTick_Handler   stm32f10x_it.o
+    0x08000612   0x00000002   PAD
+    0x08000614   0x00000060   Code   RO         3236    i.SystemInit        system_stm32f10x.o
+    0x08000674   0x00000018   Code   RO         2435    i.TIM_ARRPreloadConfig  stm32f10x_tim.o
+    0x0800068c   0x00000018   Code   RO         2447    i.TIM_Cmd           stm32f10x_tim.o
+    0x080006a4   0x000000a4   Code   RO         2481    i.TIM_OC2Init       stm32f10x_tim.o
+    0x08000748   0x0000001a   Code   RO         2484    i.TIM_OC2PreloadConfig  stm32f10x_tim.o
+    0x08000762   0x00000002   PAD
+    0x08000764   0x000000a4   Code   RO         2518    i.TIM_TimeBaseInit  stm32f10x_tim.o
+    0x08000808   0x00000004   Code   RO           76    i.UsageFault_Handler  stm32f10x_it.o
+    0x0800080c   0x0000000e   Code   RO         3656    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800081a   0x00000002   Code   RO         3657    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800081c   0x0000000e   Code   RO         3658    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800082a   0x0000009c   Code   RO         3599    i.draw_7segment     ssd1289_7seg.o
+    0x080008c6   0x00000002   PAD
+    0x080008c8   0x0000008c   Code   RO         3600    i.draw_segment      ssd1289_7seg.o
+    0x08000954   0x00000028   Code   RO          202    i.init_leds         leds.o
+    0x0800097c   0x00000084   Code   RO            1    i.main              main.o
+    0x08000a00   0x0000001e   Code   RO         3274    i.rgb888_to_rgb565  ssd1289_graphic.o
+    0x08000a1e   0x0000007e   Code   RO         3601    i.segment_putn      ssd1289_7seg.o
+    0x08000a9c   0x0000004a   Code   RO            2    i.segment_test      main.o
+    0x08000ae6   0x00000002   PAD
+    0x08000ae8   0x00000094   Code   RO         3509    i.ssd1289_bl_init   ssd1289.o
+    0x08000b7c   0x0000003c   Code   RO         3510    i.ssd1289_bl_set    ssd1289.o
+    0x08000bb8   0x00000024   Code   RO         3511    i.ssd1289_controller_init  ssd1289.o
+    0x08000bdc   0x0000004c   Code   RO         3573    i.ssd1289_dotmatrix  ssd1289_dotmatrix.o
+    0x08000c28   0x00000028   Code   RO         3574    i.ssd1289_dotmatrix_digit  ssd1289_dotmatrix.o
+    0x08000c50   0x00000044   Code   RO         3575    i.ssd1289_dotmatrix_pixel  ssd1289_dotmatrix.o
+    0x08000c94   0x00000024   Code   RO         3279    i.ssd1289_fill_screen  ssd1289_graphic.o
+    0x08000cb8   0x00000050   Code   RO         3512    i.ssd1289_init      ssd1289.o
+    0x08000d08   0x0000005e   Code   RO         3513    i.ssd1289_init_fsmc  ssd1289.o
+    0x08000d66   0x00000002   PAD
+    0x08000d68   0x00000054   Code   RO         3514    i.ssd1289_init_gpio  ssd1289.o
+    0x08000dbc   0x00000014   Code   RO         3515    i.ssd1289_read_reg  ssd1289.o
+    0x08000dd0   0x00000020   Code   RO         3516    i.ssd1289_set_cursor  ssd1289.o
+    0x08000df0   0x00000084   Code   RO         3385    i.ssd1289_set_font  ssd1289_text.o
+    0x08000e74   0x0000000c   Code   RO         3386    i.ssd1289_set_font_color  ssd1289_text.o
+    0x08000e80   0x0000001c   Code   RO         3288    i.ssd1289_setpx     ssd1289_graphic.o
+    0x08000e9c   0x00000028   Code   RO         3393    i.ssd1289_textcon_init  ssd1289_text.o
+    0x08000ec4   0x00000010   Code   RO         3517    i.ssd1289_write_reg  ssd1289.o
+    0x08000ed4   0x00002800   Data   RO         3395    .constdata          ssd1289_text.o
+    0x080036d4   0x000000b4   Data   RO         3518    .constdata          ssd1289.o
+    0x08003788   0x0000006a   Data   RO         3576    .constdata          ssd1289_dotmatrix.o
+    0x080037f2   0x0000001e   Data   RO         3602    .constdata          ssd1289_7seg.o
+    0x08003810   0x00000020   Data   RO         3654    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003830, Size: 0x00000450, Max: 0x0000c000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000450, Max: 0x0000c000, ABSOLUTE)
 
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08003830   0x00000008   Data   RW          141    .data               buttons.o
-    0x20000008   0x08003838   0x00000014   Data   RW         3237    .data               system_stm32f10x.o
-    0x2000001c   0x0800384c   0x0000000c   Data   RW         3519    .data               ssd1289.o
-    0x20000028        -       0x00000024   Zero   RW         3394    .bss                ssd1289_text.o
-    0x2000004c   0x08003858   0x00000004   PAD
-    0x20000050        -       0x00000400   Zero   RW         3267    STACK               startup_stm32f10x_hd.o
+    0x20000000   0x00000008   Data   RW          141    .data               buttons.o
+    0x20000008   0x00000014   Data   RW         3237    .data               system_stm32f10x.o
+    0x2000001c   0x0000000c   Data   RW         3519    .data               ssd1289.o
+    0x20000028   0x00000024   Zero   RW         3394    .bss                ssd1289_text.o
+    0x2000004c   0x00000004   PAD
+    0x20000050   0x00000400   Zero   RW         3267    STACK               startup_stm32f10x_hd.o
 
 
 ==============================================================================
@@ -1147,26 +1147,26 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        44         10          0          8          0        635   buttons.o
+        44         10          0          8          0        643   buttons.o
          0          0          0          0          0         32   core_cm3.o
-        40          4          0          0          0        432   leds.o
-       206          4          0          0          0     217090   main.o
-       570         60        180         12          0       5275   ssd1289.o
-       422         24         30          0          0       2767   ssd1289_7seg.o
-       184         10        106          0          0       2644   ssd1289_dotmatrix.o
-        94         12          0          0          0       1713   ssd1289_graphic.o
-       184         30      10240          0         36       3283   ssd1289_text.o
-        36          8        304          0       1024        876   startup_stm32f10x_hd.o
-        52         12          0          0          0       1164   stm32f10x_exti.o
-       282          6          0          0          0       9861   stm32f10x_fsmc.o
-       426          6          0          0          0       3405   stm32f10x_gpio.o
-        26          0          0          0          0       3614   stm32f10x_it.o
-        96         18          0          0          0       1750   stm32f10x_rcc.o
-       402         52          0          0          0      22897   stm32f10x_tim.o
-       328         28          0         20          0       2061   system_stm32f10x.o
+        40          4          0          0          0        436   leds.o
+       206          4          0          0          0     217098   main.o
+       570         60        180         12          0       5319   ssd1289.o
+       422         24         30          0          0       2787   ssd1289_7seg.o
+       184         10        106          0          0       2664   ssd1289_dotmatrix.o
+        94         12          0          0          0       1725   ssd1289_graphic.o
+       184         30      10240          0         36       3319   ssd1289_text.o
+        36          8        304          0       1024        880   startup_stm32f10x_hd.o
+        52         12          0          0          0       1172   stm32f10x_exti.o
+       282          6          0          0          0       9877   stm32f10x_fsmc.o
+       426          6          0          0          0       3421   stm32f10x_gpio.o
+        26          0          0          0          0       3650   stm32f10x_it.o
+        96         18          0          0          0       1762   stm32f10x_rcc.o
+       402         52          0          0          0      22925   stm32f10x_tim.o
+       328         28          0         20          0       2081   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      3406        284      10892         40       1064     279499   Object Totals
+      3406        284      10892         40       1064     279791   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         14          0          0          0          4          0   (incl. Padding)
 
@@ -1205,8 +1205,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3492        300      10892         40       1064     277223   Grand Totals
-      3492        300      10892         40       1064     277223   ELF Image Totals
+      3492        300      10892         40       1064     277515   Grand Totals
+      3492        300      10892         40       1064     277515   ELF Image Totals
       3492        300      10892         40          0          0   ROM Totals
 
 ==============================================================================
