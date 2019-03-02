@@ -78,3 +78,6 @@ $(TARGET).elf: $(OBJS) ./src/startup.o
 %.o: %.S
 	@echo "  CC $<"
 	@$(CC) $(INCLUDE) $(CFLAGS)  $< -o $*.o
+
+st-flash:
+	st-flash write output/main.bin 0x8000000
