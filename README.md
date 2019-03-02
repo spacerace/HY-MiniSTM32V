@@ -27,6 +27,7 @@ they just use gcc/make.
 	* USART1 + printf + floating point numbers
 
 ### Changelog:
+	2019-03-01	reworked sd-card example
 	2018-06-15	bkp registers
 	2018-06-15	printf double float
 	2018-06-11	dwt cycle counter
