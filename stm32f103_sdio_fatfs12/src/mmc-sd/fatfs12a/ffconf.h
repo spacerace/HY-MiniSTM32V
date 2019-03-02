@@ -34,7 +34,7 @@
 /  2: Enable with LF-CRLF conversion. */
 
 
-#define _USE_FIND		0
+#define _USE_FIND		1
 /* This option switches filtered directory read functions, f_findfirst() and
 /  f_findnext(). (0:Disable, 1:Enable 2:Enable with matching altname[] too) */
 
@@ -134,7 +134,7 @@
 /  This option has no effect when _LFN_UNICODE == 0. */
 
 
-#define _FS_RPATH	0
+#define _FS_RPATH	2
 /* This option configures support of relative path.
 /
 /   0: Disable relative path and remove related functions.
