@@ -1,1 +1,6 @@
+*.map
+*.elf
+*.lst
+.directory
+*.bin
 *.o
