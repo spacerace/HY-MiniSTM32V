@@ -16,8 +16,7 @@ These are used by the startup in order to allocate stacks for the different mode
 ENTRY(Reset_Handler)
 
 
-__Stack_Size = 0x1000 ;		
-/* 0x1000 = 4096bytes*/
+__Stack_Size = 0x2000 ;
 
 PROVIDE ( _Stack_Size = __Stack_Size ) ;
 
@@ -28,21 +27,20 @@ PROVIDE ( _Stack_Init = __Stack_Init ) ;
 
 /*
 There will be a link error if there is not this amount of RAM free at the end.
-// 0x200 = 512bytes
 */
-_Minimum_Stack_Size = 0x400 ;
+_Minimum_Stack_Size = 0x200 ;
 
 
 
 /* include the memory spaces definitions sub-script */
 /*
-Linker subscript for STM32F103VCT6 definitions with 256K Flash and 48K Internal SRAM */
+Linker subscript for STM32F103VCT6 definitions with 256K Flash and 64K Internal SRAM */
 
 /* Memory Spaces Definitions */
 
 MEMORY
 {
-  RAM (xrw)     : ORIGIN = 0x20000000, LENGTH = 48K
+  RAM (xrw)     : ORIGIN = 0x20000000, LENGTH = 64K
   FLASH (rx)    : ORIGIN = 0x08000000, LENGTH = 256K
   FLASHB1 (rx)  : ORIGIN = 0x00000000, LENGTH = 0
   EXTMEMB0 (rx) : ORIGIN = 0x00000000, LENGTH = 0
@@ -51,8 +49,8 @@ MEMORY
   EXTMEMB3 (rx) : ORIGIN = 0x00000000, LENGTH = 0
 }
 
-/* higher address of the user mode stack */
-_estack = 0x2000bfff;
+/* end of 64k RAM */
+_estack =   0x20010000;
 
 
 
@@ -92,7 +90,7 @@ SECTIONS
         *(.glue_7t)
 
 	    . = ALIGN(4);
-   	 _etext = .;
+   	 _etext = . + 32;
 	    /* This is used by the startup in order to initialize the .data secion */
    	 _sidata = _etext;
     } >FLASH
@@ -103,7 +101,7 @@ SECTIONS
     The program executes knowing that the data is in the RAM
     but the loader puts the initial values in the FLASH (inidata).
     It is one task of the startup to copy the initial values from FLASH to RAM. */
-    .data  : AT ( _sidata )
+    .data  : AT ( (_sidata) )
     {
 	    . = ALIGN(4);
         /* This is used by the startup in order to initialize the .data secion */
