@@ -5,6 +5,9 @@ This board ships with some Keil Examples which are very buggy and mostly
 unusable.
 The makefile-examples in this archive are all IDE-independet, 
 they just use gcc/make.
+
+ssd1289+ads7843 TFT and Touchscreen examples are located in a different  
+repository. See [here](https://github.com/spacerace/ssd1289).
   
 ### Included Example Projects (makefile):  
 	* Overclocking to 128MHz
