@@ -2,7 +2,7 @@
   
 This archive includes a few example projects for the **HY-MiniSTM32V board**.  
 This board ships with some Keil Examples which are very buggy and mostly  
-unusable.  
+unusable.
 The makefile-examples in this archive are all IDE-independet, 
 they just use gcc/make.
   
@@ -12,12 +12,10 @@ they just use gcc/make.
 	* USART1 with/without printf, with/without interrupts
 	* I2C1 with PCF8574
 	* CPU temperature reading via ADC
-	* CRC calculation
-	* CRC engine emulation in C
+	* CRC calculation (+emulation in C)
 	* EXTI, Buttons, LEDs
-	* SysTick Interrupt, Delay-Routine
-	* ADS7843 TouchScreen
-	* SDIO FatFS
+	* SysTick Interrupt, delay and time measurement
+	* SDIO + Elm Chan's FatFS
 
 ### Included Example Projects (Keil):
 	* Battery backed backup registers (RTC)
@@ -27,6 +25,7 @@ they just use gcc/make.
 	* USART1 + printf + floating point numbers
 
 ### Changelog:
+	2019-03-13	moved TFT+touch into own project
 	2019-03-01	reworked sd-card example
 	2018-06-15	bkp registers
 	2018-06-15	printf double float
