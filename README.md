@@ -33,24 +33,3 @@ repository. See [here](https://github.com/spacerace/ssd1289).
 	* SSD1289 320x240px TFT Display
 	* USART1 + printf + floating point numbers
 
-### Changelog:
-	2019-03-13	moved TFT+touch into own project
-	2019-03-01	reworked sd-card example
-	2018-06-15	bkp registers
-	2018-06-15	printf double float
-	2018-06-11	dwt cycle counter
-	2018-06-09	7segment + dotmatrix
-	2018-06-08	overclock to 128MHz
-	2018-06-07	SSD1289
-	2018-06-07	keil blinky
-	2016-07-14	elm chan's fatfs v0.12a
-	2016-07-07	ads7843
-	2016-07-07	leds
-	2015-09-09	Systick delay
-	2015-09-08	I2C
-	2015-09-07	CRC
-	2015-09-07	EXTI-Buttons-LEDs
-	2015-09-07	ADC cpu temp example
-	2015-09-07	I2C example
-	2015-09-07	initial commit, USART1 ex, README-files
-
