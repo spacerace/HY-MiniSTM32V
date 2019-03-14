@@ -26,6 +26,7 @@ repository. See [here](https://github.com/spacerace/ssd1289).
 ### Included Example Projects (makefile, libopencm3):
 	* SysTick + GPIO (blinky)
 	* USART1
+	* ADC1 polling
 
 ### Included Example Projects (Keil, SPL):
 	* Battery backed backup registers (RTC)
