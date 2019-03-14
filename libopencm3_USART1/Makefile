@@ -1,5 +1,5 @@
 # name of the output files. Will generate $(OUTPUT).elf, $(OUTPUT).hex and $(OUTPUT).bin
-OUTPUT  = blinky
+OUTPUT  = USART
 
 # here you can set your compiler prefix and/or tool-names
 # usually there is no need to change.
