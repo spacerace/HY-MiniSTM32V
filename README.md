@@ -24,7 +24,8 @@ repository. See [here](https://github.com/spacerace/ssd1289).
 	* SDIO + Elm Chan's FatFS
 
 ### Included Example Projects (makefile, libopencm3):
-	* systick+GPIO
+	* SysTick + GPIO (blinky)
+	* USART1
 
 ### Included Example Projects (Keil, SPL):
 	* Battery backed backup registers (RTC)
