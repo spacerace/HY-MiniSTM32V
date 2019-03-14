@@ -14,7 +14,7 @@ libopencm3 is included in this archive.
 ```
 $ make
 ```
-This will build libopencm3 and the blink-code. It will generate an ELF, a BIN and a HEX binary,
+This will build libopencm3 and the demo-code. It will generate an ELF, a BIN and a HEX binary,
 as well as listing and map files.
 
 # libopencm3
