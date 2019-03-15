@@ -3,6 +3,7 @@ This folder contains a simple example for the HY-MiniSTM32V board using [libopen
 that comes with a `STM32F103VCT6` controller.  
   
 This example just blinks the first onboard LED connected to `PB0`.  
+Onboard buttons on `PC13` and `PB2` are used to enable/disable second onboard LED on `PB1`.
 
 # Requirements
 You will need a suitable arm-gcc for building and texane's st-link utility for flashing.  
