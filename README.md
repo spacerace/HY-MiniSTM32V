@@ -11,6 +11,14 @@ Until now most examples use SPL 3.5.0.
 
 ssd1289+ads7843 TFT and Touchscreen examples are located in a different  
 repository. See [here](https://github.com/spacerace/ssd1289).
+
+### Included Example Projects (makefile, libopencm3):
+	* FreeRTOS 9.0.0, uses USART1 to do a "demo"
+	* SysTick + GPIO (blinky)
+	* USART1
+	* ADC1 polling
+	* PWM 3 channels (TIM3)
+	* PWM TFT backlight (TIM3)
   
 ### Included Example Projects (makefile, SPL):  
 	* Overclocking to 128MHz
@@ -22,11 +30,6 @@ repository. See [here](https://github.com/spacerace/ssd1289).
 	* EXTI, Buttons, LEDs
 	* SysTick Interrupt, delay and time measurement
 	* SDIO + Elm Chan's FatFS
-
-### Included Example Projects (makefile, libopencm3):
-	* SysTick + GPIO (blinky)
-	* USART1
-	* ADC1 polling
 
 ### Included Example Projects (Keil, SPL):
 	* Battery backed backup registers (RTC)
