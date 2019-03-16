@@ -16,6 +16,7 @@ repository. See [here](https://github.com/spacerace/ssd1289).
 	* FreeRTOS 9.0.0, uses USART1 to do a "demo"
 	* SysTick + GPIO (blinky)
 	* USART1
+	* USART1 + printf (including newlib syscall _write())
 	* ADC1 polling
 	* PWM 3 channels (TIM3)
 	* PWM TFT backlight (TIM3)
